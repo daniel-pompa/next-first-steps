@@ -1,0 +1,7 @@
+.link {
+  @apply flex items-center mr-4 hover:text-slate-300 transition-colors;
+}
+
+.active-link {
+  @apply text-slate-300;
+}

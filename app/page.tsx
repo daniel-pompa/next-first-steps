@@ -1,101 +1,54 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import { TestimonialCarousel } from '@/components';
+import { FaUser, FaBriefcase, FaBuilding } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className='flex flex-col min-h-screen items-center justify-center p-4'>
+      <h1 className='text-2xl md:text-4xl font-bold md:font-extrabold text-slate-800 my-10 text-center'>
+        Welcome to Daem Tech Solutions
+      </h1>
+      <div className='text-sm md:text-lg bg-white shadow-lg rounded p-8 md:p-12 text-center max-w-4xl'>
+        <p className='text-slate-700 leading-relaxed mb-4'>
+          Discover our platform offering innovative solutions tailored to individual,
+          business, and enterprise needs. Start exploring our features and find out how we
+          can help you achieve your goals.
+        </p>
+        <p className='text-slate-700 leading-relaxed mb-6'>
+          Our platform is designed to be user-friendly, efficient, and adaptable. Whether
+          you're a startup, a small business, or an enterprise, we have everything you
+          need to succeed.
+        </p>
+        <button className='text-xs md:text-lg mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300'>
+          Get started
+        </button>
+      </div>
+      <section className='text-sm md:text-base mt-16 grid gap-8 md:grid-cols-3 max-w-4xl'>
+        <div className='bg-white p-6 rounded shadow-md text-center'>
+          <FaUser className='text-4xl text-slate-600 mx-auto mb-4' />
+          <h2 className='text-xl font-bold text-slate-800'>For Individuals</h2>
+          <p className='text-slate-600 mt-2'>
+            Access tools and resources tailored to personal growth and learning.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className='bg-white p-6 rounded shadow-md text-center'>
+          <FaBriefcase className='text-4xl text-slate-600 mx-auto mb-4' />
+          <h2 className='text-xl font-bold text-slate-800'>For Businesses</h2>
+          <p className='text-slate-600 mt-2'>
+            Empower your business with solutions designed for efficiency and growth.
+          </p>
+        </div>
+        <div className='bg-white p-6 rounded shadow-md text-center'>
+          <FaBuilding className='text-4xl text-slate-600 mx-auto mb-4' />
+          <h2 className='text-xl font-bold text-slate-800'>For Enterprises</h2>
+          <p className='text-slate-600 mt-2'>
+            Scalable and secure solutions to meet your organization's demands.
+          </p>
+        </div>
+      </section>
+      <section>
+        <TestimonialCarousel />
+      </section>
+    </main>
   );
 }
